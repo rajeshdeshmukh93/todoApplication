@@ -1,0 +1,16 @@
+<p>Todo App!</p>
+<input type="text" placeholder="Enter the items" #item>
+<br> <br>
+
+<button (click)="addTask(item.value); item.value=''">Add TAsk</button>
+
+<div class="container">
+    <div class="content">
+        <ul *ngFor="let l of list">
+            <li>{{l.name}}
+                 <button (click)="removeTask(l.id)">Delete</button>
+                 <button (click)="editTask(l)">Edit</button>
+            </li>
+        </ul>
+    </div>
+</div>
