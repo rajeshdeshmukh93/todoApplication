@@ -14,3 +14,29 @@
         </ul>
     </div>
 </div>
+
+
+<div class="container fluid" style="margin-top: 10px;">
+    <div class="row">
+        <!-- Event binding -->
+        <div class="col-md-4">
+            <h1>Event Binding</h1>
+            <button type="button" (click)="showData($event)">Show Event</button>
+        </div>
+        <!-- Property Binding -->
+        <div class="col-md-4">
+            <h1>One way Data binding</h1>
+            <input type="text" [value]="name">
+            {{name}}
+            <h1>One way data Binding</h1>
+            <input type="text" name="hobby" ngModel>
+        </div>
+        <!-- Two way Data Binding -->
+        <div class="col-md-4">
+            <h1>Two Way Data Binding</h1>
+            <input type="text" [(ngModel)]="lastName">
+            {{lastName}}
+        </div>
+    </div>
+</div>
+
