@@ -10,7 +10,9 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   list:any[]=[];
-
+  name: string = "Rajesh";
+  lastName!:string;
+  hobby!:string;
   ngOnInit(): void {
   }
   
@@ -27,5 +29,11 @@ export class HomeComponent implements OnInit {
   
   editTask(data:[]){
 
+  }
+
+  showData($event:any){
+    console.log("button is clicked");
+    console.log($event.target);
+    console.log($event.target.value);
   }
 }
